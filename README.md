@@ -1,9 +1,9 @@
-# Pyheap - Heaps in python
+# Heapy - Ordered Customisable Heaps in python
 Easy to use, customisable ordered heaps in python.
 
 # Installation
 ```
-pip install pyheap
+pip install heaps
 ```
 ## OR....
 Just copy heap.py to your file or directory
@@ -114,7 +114,18 @@ Like the sort function you can give comparator for the heap
 
 ```
 
+# Example
+```
+from heapy.heap import OrderedHeap
 
+heap = OrderedHeap(min_heap=True)
+
+for i in [1, 2, 3, 49, 10, 2, 1, 21, 2, 12, 12, 2, 2, 1, 2]:
+    heap.insert(i)
+
+while heap.length:
+    print(heap.pop())
+```
 
 
 
