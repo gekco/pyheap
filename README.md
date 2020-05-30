@@ -38,6 +38,21 @@ heap = Heap.from_array(arr, min_heap=True)
 heap.insert(12)
 heap.insert(120)
 ```
+## Top
+You can get the top element from heap 
+```
+arr = [9,0,-1,2,3,21]
+heap = Heap.from_array(arr, min_heap=True)
+heap.top()
+```
+
+## Length of Heap
+You can getlength of heap 
+```
+arr = [9,0,-1,2,3,21]
+heap = Heap.from_array(arr, min_heap=True)
+heap.length
+```
 
 ## Pop
 You can pop from heap 
@@ -51,6 +66,7 @@ heap.pop().  # will print -1
 
 ## Custom Score Heap
 You can give a function in key which gives the score for that node, for example if you want your node to be a pair of (<char>, <count>) 
+
 ```
 counts = {'A':1, 'B' : 2, 'C':3}
 heap = Heap.from_array(counts.items(), key= lambda y : y[1])
