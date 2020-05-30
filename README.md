@@ -12,7 +12,7 @@ Just copy heap.py to your file or directory
 # Usage and Methods
 
 
-# Creation
+## Creation
 You can create a heap from an array of nodes. A node here can be anything from what you want it to be. An integer, string, custom class, dictionary node
 
 ## Empty heap
@@ -39,7 +39,7 @@ heap.insert(12)
 heap.insert(120)
 ```
 
-# Pop
+## Pop
 You can pop from heap 
 ```
 arr = [9,0,-1,2,3,21]
@@ -49,7 +49,7 @@ heap.insert(120)
 heap.pop().  # will print -1
 ```
 
-# Custom Score Heap
+## Custom Score Heap
 You can give a function in key which gives the score for that node, for example if you want your node to be a pair of (<char>, <count>) 
 ```
 counts = {'A':1, 'B' : 2, 'C':3}
@@ -58,7 +58,7 @@ while heap.length:
   heap.pop()
 ```
 
-# Custom Comparator Heap
+## Custom Comparator Heap
 Like the sort function you can give comparator for the heap 
 ```
     class CustomHeapNode:
