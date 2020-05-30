@@ -1,12 +1,21 @@
-from setuptools import setup
+from distutils.core import setup
 
 setup(
-    name='heapy',
-    version='0.0.0',
-    packages=[''],
-    url='',
-    license='',
-    author='ankitkathuria',
+    name='heaps',
+    packages=['heapy'],
+    version='0.0.1',
+    license='MIT',
+    description='Better Heaps for python',
+    author='Ankit Kathuria',
     author_email='ankitkathuria534@gmail.com',
-    description='Ordered Heaps For Python'
+    url='https://github.com/gekco/pyheap',
+    keywords=['Heap', 'python', 'ordered heaps', 'easy', 'priority queue'],
+    classifiers=[
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+    ],
 )
