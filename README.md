@@ -1,9 +1,9 @@
-# Heapy - Heaps in python
+# Pyheap - Heaps in python
 Easy to use, customisable ordered heaps in python.
 
 # Installation
 ```
-pip install heapy
+pip install pyheap
 ```
 ## OR....
 Just copy heap.py to your file or directory
