@@ -1,4 +1,4 @@
-# Heapy - Heaps in python
+# Heapy - Ordered Customisable Heaps in python
 Easy to use, customisable ordered heaps in python.
 
 # Installation
