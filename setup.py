@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='heaps',
     packages=['heapy'],
-    version='0.0.2',
+    version='0.0.3',
     license='MIT',
     description='Better Heaps for python',
     author='Ankit Kathuria',
