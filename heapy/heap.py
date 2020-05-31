@@ -132,10 +132,10 @@ class Heap:
         :return:
         """
         a = self.convert_node_to_representation(a)
-        if self.length < len(self._heap_arr):
-            self._heap_arr[self.length] = a
-        else:
-            self._heap_arr.append(a)
+        # if self.length < len(self._heap_arr):
+        #    self._heap_arr[self.length] = a
+        # else:
+        self._heap_arr.append(a)
         self.length += 1
         self.heapify_up(len(self._heap_arr) - 1)
 

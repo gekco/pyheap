@@ -1,6 +1,6 @@
 from random import randint
 
-from heap import Heap, OrderedHeap
+from heapy.heap import Heap, OrderedHeap
 
 
 def check_heap(arr, heap, reverse=False, key=None):
@@ -115,3 +115,41 @@ def test_comparator():
         print(str(heap_arr[i]), str(sorted_arr[i]))
 
     assert heap_arr == sorted_arr
+
+
+def get_top_k_elemets(nums, k):
+    count = {}
+    for i in nums:
+        if i not in count:
+            count[i] = 0
+        count[i] += 1
+    heap = OrderedHeap(min_heap=True, key=lambda y: y[1])
+
+    # print(count)
+
+    for i in count:
+        if heap.length < k:
+            heap.insert([i, count[i]])
+        elif heap.top()[1] < count[i]:
+            heap.pop()
+            heap.insert([i, count[i]])
+        # print(heap._heap_arr)
+
+    ans = []
+    # print(heap.length, heap._heap_arr)
+    while heap.length:
+        val = heap.pop()
+        # print(val)
+        # if val != float("infinity"):
+        ans.append(val[0])
+    return ans
+
+
+def test_top_k_elements_heap():
+    for nums, k, result in [
+        [[-1, 1, 4, -4, 3, 5, 4, -2, 3, -1], 3, [-1, 3, 4]],
+        [[5, -3, 9, 1, 7, 7, 9, 10, 2, 2, 10, 10, 3, -1, 3, 7, -9, -1, 3, 3],
+         3, [10, 7, 3]],
+        [[5, 2, 5, 3, 5, 3, 1, 1, 3], 2, [5, 3]]
+    ]:
+        assert get_top_k_elemets(nums, k) == result
